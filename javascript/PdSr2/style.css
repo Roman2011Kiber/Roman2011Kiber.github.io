@@ -1,0 +1,19 @@
+.chuvak{
+    background-color:beige;
+    float:left;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding:5px;
+    transition:all 1.5s ease;
+
+}
+.chuvak:hover{
+    border-bottom:2px solid rgb(132, 178, 207);
+    border-right:2px solid rgb(132, 178, 207);
+}
+#spisok{
+    display:flex;
+    flex-direction:column;
+}
+.yellow{
+    background-color:yellow;
+}
