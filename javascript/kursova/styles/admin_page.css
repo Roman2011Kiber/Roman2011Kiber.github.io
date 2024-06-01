@@ -1,0 +1,42 @@
+.add_tovars{
+    background:linear-gradient(to right,orange,white,white,white,orange);
+    background-size:cover;
+    width:100vw;
+    height:100vh;
+    position:fixed;
+    top:0;
+    left:0;
+    display:none;
+}
+.form{
+    background:rgba(255,163,33,0.6);
+    width:50vw;
+    height:80vh;
+    margin:30px auto;
+    overflow-y:scroll;
+    padding:10px;
+}
+.tovars{
+	width: 100%;
+}
+table{
+    width:100%;
+    border:1px solid darkblue;
+    border-radius:5px;
+}
+td, th {
+    padding: 10px;
+    text-align: center !important;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 150px;
+}
+
+th{
+	padding: 10px;
+	text-align: center !important;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 150px;
+}

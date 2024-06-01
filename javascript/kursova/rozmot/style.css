@@ -1,0 +1,23 @@
+.menu{
+    width: 80%;
+    margin-left: 10%;
+    height: 70px;
+    background-image:url(https://xmple.com/wallpaper/triangle-azure-2560x1080-c2-1b4792-152b50-l2-280-840-a-30-f-10.svg);
+    display: flex;
+    justify-content: space-evenly;
+}
+.menu_botton{
+    width: 9%;
+    height: 70px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.4) 50%,rgba(0, 0, 255, 0) 50%);
+    background-size: 200% 100%;
+    transition: all 0.25s linear;
+    background-position: 100% 20%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.menu_botton:hover{
+    background-position: 0% 20%;
+}

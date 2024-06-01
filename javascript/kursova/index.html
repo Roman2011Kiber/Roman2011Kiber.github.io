@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="menu">
+		
+        <div>
+            <a href="" class="menu_batton_left"><img height="34px" src=""></a>
+			<a href="" class="menu_batton_left">Головна</a>
+		</div>
+		
+		
+		
+		<div class="menu_right">
+		
+			<a href="" class="menu_batton_right"><img height="28px" src="https://cdn-icons-png.flaticon.com/128/535/535679.png"></a>
+			
+			<div class="circle menu_batton_right">
+				<a href=""><img src="https://cdn-icons-png.flaticon.com/512/1326/1326558.png" height="27px"></a>
+				<span class="number" id="number_basket">0</span>
+			</div>
+			
+			<a href="" class="menu_batton_right">Вхід/Вихід</a>
+			
+            <div class="menu_prof">
+                <a href=""><img color="white" height="34px" src="https://cdn-icons-png.flaticon.com/128/14441/14441470.png"></a>
+            </div>
+		</div>
+		
+	</div>
+    <div class="main">
+		<div class="filter">
+			<div style="flex: 1;">
+				<div class="filter_tovars">
+					<input type="email" class="form-control" id="name" placeholder="Назва товару">
+				</div>
+            	<div class="filter_tovars">
+					<label for="">Тип товару</label>
+					<select class="form-select" aria-label="Default select example" id="tovar_type">
+						<option selected></option>
+						<option value="brouse">Кофта</option>
+						<option value="pants">Штани</option>
+						<option value="socks">Обувь</option>
+					</select>
+				</div>
+				<div class="filter_tovars">
+					<label for="">Сортуваня по ціні</label>
+					<select class="form-select" aria-label="Default select example" id="price_sort">
+						<option selected></option>
+						<option value="growth">По спаданю</option>
+						<option value="decline">По зростаню</option>
+					</select>
+				</div>
+				<div class=" filter_tovars">
+					<input type="text" class="form-control" id="size" placeholder="Розмір">
+				</div>
+					<div class="wrapper">
+						<div class="values">
+							<h5>Ціна</h5>
+							<span id="range1">
+								
+							</span>
+							<span> &dash; </span>
+							<span id="range2">
+								
+							</span>
+						</div>
+					<div class="container">
+						<div class="slider-track"></div>
+							<input type="range" min="0" max="250" value="0" id="slider-1" oninput="slideOne()">
+							<input type="range" min="0" max="250" value="250" id="slider-2" oninput="slideTwo()">
+						</div>
+					</div>
+            	<div class="filter_tovars">
+					<label for="">Сезон</label><br>
+					<select class="form-select" aria-label="Default select example" id="tovar_season">
+						<option selected></option>
+						<option value="summer">Літо</option>
+						<option value="autumn">Осінь</option>
+						<option value="winter">Зима</option>
+						<option value="spring">Весна</option>
+					</select>
+				</div>
+				
+				<div class=" filter_tovars">
+					<input type="text" class="form-control" id="color" placeholder="Колір">
+				</div>
+				<div class=" filter_tovars">
+					<input type="text" class="form-control" id="producer" placeholder="Виробник">
+				</div>
+			</div>
+			<div style="display: flex; flex-direction: column; justify-content: flex-end;">
+            	<div class="botton_filter">
+                	<button class="bottons_filter" style="border-top-left-radius: 5px; border-bottom-left-radius: 5px; flex: 1;" onclick="cast_filters()">Скинути фільтри</button>
+                	<button class="bottons_filter" id="save_filters" style="border-top-right-radius: 5px; border-bottom-right-radius: 5px;">Зберегти фільтри</button>
+            	</div>
+			</div>
+        </div>
+        <div class="all_tovars" id="all_tovars">
+		
+            <div class="card_tovar">
+                <img src="https://shop.lerros.net.ua/image/cache/catalog/products/2294535485/20-500x500.jpg" class="img_tovar">
+                <div class="inform">
+                    <div class="name_tovar"><h4 align="center">Назва</h4></div>
+                    <div class="opis_tovar"><p align="center">Опис</p></div>
+                    <div class="price_tovar">Ціна</div>
+                    <div class="botton_card"></div>
+                </div>
+                <div class="botton_card">
+                    <button class="botton_tovar botton_tovar_left">Інформація</button>
+                    <button class="botton_tovar botton_tovar_right"><img src="https://cdn-icons-png.flaticon.com/512/1326/1326558.png" class="botton_tovar_img"></button>
+                </div>
+			</div>
+			
+        </div>
+		<div style="background:rgba(0,0,0,0.25);
+					width:100%;
+					height:100%;
+					display: none;
+					position:fixed;
+				" id="block_info">
+		<div class="info_block_tovar">
+			<div class="center_block" id="info_tovar">
+				
+			</div>
+			<button class="botton_block_del" onclick="del_info_block()"><h4 align="center"  style="
+			margin: auto;">X</h4></button>
+		</div>
+		</div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore-compat.js"></script>
+    <script src="firebase/config.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
